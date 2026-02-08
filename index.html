@@ -2,94 +2,74 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>For Purva 💕</title>
+<title>For Purva 💗</title>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap');
 
 body {
   margin: 0;
   height: 100vh;
-  font-family: 'Poppins', sans-serif;
-  background: linear-gradient(135deg, #ffd6e8, #e0c3fc);
+  font-family: 'Quicksand', sans-serif;
+  background: linear-gradient(135deg, #ffe6f0, #f2e9ff);
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
 }
 
 .card {
-  background: rgba(255, 255, 255, 0.35);
+  background: white;
   padding: 40px;
-  border-radius: 25px;
+  border-radius: 22px;
   text-align: center;
-  max-width: 520px;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
-  backdrop-filter: blur(12px);
+  max-width: 480px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.1);
 }
 
 h1 {
-  font-size: 2.7em;
-  color: #ff4f81;
+  color: #ff5c8a;
+  font-size: 2.5em;
   margin-bottom: 10px;
 }
 
 p {
+  color: #555;
   font-size: 1.15em;
-  color: #5a2a4a;
-  line-height: 1.8;
+  line-height: 1.7;
 }
 
-.cute {
+.heart {
   font-size: 2.8em;
   margin: 20px 0;
-  animation: float 2s infinite ease-in-out;
-}
-
-@keyframes float {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
-  100% { transform: translateY(0); }
 }
 
 h2 {
-  color: #ff2f6e;
+  color: #ff5c8a;
   margin-top: 20px;
 }
 
 button {
-  background: #ff6fa1;
+  background: #ff5c8a;
   color: white;
   border: none;
-  padding: 14px 30px;
-  border-radius: 40px;
-  font-size: 1.05em;
+  padding: 12px 28px;
+  border-radius: 30px;
+  font-size: 1em;
   margin: 12px;
   cursor: pointer;
   transition: 0.3s;
-  box-shadow: 0 10px 20px rgba(255,111,161,0.4);
 }
 
 button:hover {
-  transform: scale(1.08);
-  background: #ff4f81;
+  background: #ff3f75;
+  transform: scale(1.05);
 }
 
 #msg {
   display: none;
   margin-top: 25px;
-  font-size: 1.3em;
-  color: #6a0035;
-}
-.heart {
-  position: absolute;
-  color: #ff4f81;
-  font-size: 1.5em;
-  animation: fall 5s linear infinite;
-}
-@keyframes fall {
-  0% { transform: translateY(-10vh); opacity: 1; }
-  100% { transform: translateY(110vh); opacity: 0; }
+  font-size: 1.25em;
+  color: #ff5c8a;
 }
 </style>
 </head>
@@ -97,31 +77,30 @@ button:hover {
 <body>
 
 <div class="card">
-  <h1>Hey Purva 💖</h1>
+  <h1>Hey Purva 💗</h1>
 
   <p>
-    You walked into my life so quietly,  
-    but somehow became my favorite part of it.  
-    Everything feels warmer, cuter, and happier with you.
+    I don’t need big words or big gestures.  
+    I just know that life feels better with you in it.
   </p>
 
-  <div class="cute">🐻🌸💗</div>
+  <div class="heart">🤍💖🤍</div>
 
   <p>
-    I smile a little more because of you,  
-    and my heart feels at home when you’re around.
+    You make ordinary days feel special,  
+    and my heart feels calm when I’m with you.
   </p>
 
-  <h2>Purva, will you be mine forever? 💍✨</h2>
+  <h2>Purva, will you be mine? 🌸</h2>
 
-  <button onclick="yes()">YESSS 💕</button>
-  <button onclick="no()">umm… NO 🙈</button>
+  <button onclick="yes()">Yes 💕</button>
+  <button onclick="no()">No 🙈</button>
 
   <div id="msg">
-    I knew you’d say yes 🥹💖<br><br>
-    I promise to care for you, laugh with you,  
-    and choose you—today and always.<br><br>
-    — Varad 💞
+    Thank you for choosing me 🥹💗<br><br>
+    I promise to care for you, respect you,  
+    and walk with you — always.<br><br>
+    — Varad 🤍
   </div>
 </div>
 
@@ -129,22 +108,10 @@ button:hover {
 function yes() {
   document.getElementById("msg").style.display = "block";
 }
-
 function no() {
-  alert("hehe 😌 that button is just for decoration 💗");
-}
-
-// floating hearts
-for (let i = 0; i < 20; i++) {
-  let heart = document.createElement("div");
-  heart.className = "heart";
-  heart.innerHTML = "💖";
-  heart.style.left = Math.random() * 100 + "vw";
-  heart.style.animationDuration = (3 + Math.random() * 3) + "s";
-  document.body.appendChild(heart);
+  alert("hehe 😌 that option doesn’t exist 💗");
 }
 </script>
 
 </body>
 </html>
-
