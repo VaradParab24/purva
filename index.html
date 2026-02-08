@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>For Purva ❤️</title>
+<style>
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #ff758c, #ff7eb3);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+.card {
+  background: rgba(255,255,255,0.15);
+  padding: 40px;
+  border-radius: 20px;
+  text-align: center;
+  max-width: 500px;
+  backdrop-filter: blur(10px);
+}
+h1 { font-size: 2.6em; }
+p { font-size: 1.2em; line-height: 1.7; }
+.heart {
+  font-size: 3.5em;
+  animation: beat 1s infinite;
+}
+@keyframes beat {
+  0%,100% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+}
+button {
+  background: white;
+  color: #ff4f81;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 30px;
+  margin: 10px;
+  font-size: 1em;
+  cursor: pointer;
+}
+#msg {
+  display: none;
+  font-size: 1.4em;
+  margin-top: 20px;
+}
+</style>
+</head>
+<body>
+
+<div class="card">
+  <h1>Dear Purva ❤️</h1>
+  <p>
+    Life feels softer, happier, and more beautiful with you in it.
+    You are my favorite feeling.
+  </p>
+
+  <div class="heart">❤️</div>
+
+  <h2>Purva, will you be mine? 💍</h2>
+
+  <button onclick="yes()">YES 💖</button>
+  <button onclick="no()">NO 🙈</button>
+
+  <div id="msg">
+    You just made me the happiest person alive 🥹❤️<br><br>
+    I promise to choose you, every single day.<br><br>
+    — Varad 💕
+  </div>
+</div>
+
+<script>
+function yes() {
+  document.getElementById("msg").style.display = "block";
+}
+function no() {
+  alert("Nice try 😌❤️");
+}
+</script>
+
+</body>
+</html>
