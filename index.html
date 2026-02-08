@@ -24,6 +24,18 @@ body {
   text-align: center;
   max-width: 480px;
   box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+  animation: fadeIn 1.4s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 h1 {
@@ -41,6 +53,12 @@ p {
 .heart {
   font-size: 2.8em;
   margin: 20px 0;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
 }
 
 h2 {
@@ -57,12 +75,12 @@ button {
   font-size: 1em;
   margin: 12px;
   cursor: pointer;
-  transition: 0.3s;
+  transition: transform 0.3s, background 0.3s;
 }
 
 button:hover {
   background: #ff3f75;
-  transform: scale(1.05);
+  transform: scale(1.06);
 }
 
 #msg {
@@ -70,6 +88,7 @@ button:hover {
   margin-top: 25px;
   font-size: 1.25em;
   color: #ff5c8a;
+  animation: fadeIn 1s ease;
 }
 </style>
 </head>
@@ -81,7 +100,7 @@ button:hover {
 
   <p>
     I don’t need big words or big gestures.  
-    I just know that life feels better with you in it.
+    I just know life feels better with you in it.
   </p>
 
   <div class="heart">🤍💖🤍</div>
