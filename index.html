@@ -2,73 +2,126 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>For Purva ❤️</title>
+<title>For Purva 💕</title>
+
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
 body {
   margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(135deg, #ff758c, #ff7eb3);
   height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #ffd6e8, #e0c3fc);
   display: flex;
   justify-content: center;
   align-items: center;
-  color: white;
+  overflow: hidden;
 }
+
 .card {
-  background: rgba(255,255,255,0.15);
+  background: rgba(255, 255, 255, 0.35);
   padding: 40px;
-  border-radius: 20px;
+  border-radius: 25px;
   text-align: center;
-  max-width: 500px;
-  backdrop-filter: blur(10px);
+  max-width: 520px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+  backdrop-filter: blur(12px);
 }
-h1 { font-size: 2.6em; }
-p { font-size: 1.2em; line-height: 1.7; }
-.heart {
-  font-size: 3.5em;
-  animation: beat 1s infinite;
-}
-@keyframes beat {
-  0%,100% { transform: scale(1); }
-  50% { transform: scale(1.2); }
-}
-button {
-  background: white;
+
+h1 {
+  font-size: 2.7em;
   color: #ff4f81;
-  border: none;
-  padding: 12px 28px;
-  border-radius: 30px;
-  margin: 10px;
-  font-size: 1em;
-  cursor: pointer;
+  margin-bottom: 10px;
 }
+
+p {
+  font-size: 1.15em;
+  color: #5a2a4a;
+  line-height: 1.8;
+}
+
+.cute {
+  font-size: 2.8em;
+  margin: 20px 0;
+  animation: float 2s infinite ease-in-out;
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+h2 {
+  color: #ff2f6e;
+  margin-top: 20px;
+}
+
+button {
+  background: #ff6fa1;
+  color: white;
+  border: none;
+  padding: 14px 30px;
+  border-radius: 40px;
+  font-size: 1.05em;
+  margin: 12px;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 10px 20px rgba(255,111,161,0.4);
+}
+
+button:hover {
+  transform: scale(1.08);
+  background: #ff4f81;
+}
+
 #msg {
   display: none;
-  font-size: 1.4em;
-  margin-top: 20px;
+  margin-top: 25px;
+  font-size: 1.3em;
+  color: #6a0035;
+}
+.heart {
+  position: absolute;
+  color: #ff4f81;
+  font-size: 1.5em;
+  animation: fall 5s linear infinite;
+}
+@keyframes fall {
+  0% { transform: translateY(-10vh); opacity: 1; }
+  100% { transform: translateY(110vh); opacity: 0; }
 }
 </style>
 </head>
+
 <body>
 
 <div class="card">
-  <h1>Dear Purva ❤️</h1>
+  <h1>Hey Purva 💖</h1>
+
   <p>
-    Life feels softer, happier, and more beautiful with you in it.
-    You are my favorite feeling.
+    You walked into my life so quietly,  
+    but somehow became my favorite part of it.  
+    Everything feels warmer, cuter, and happier with you.
   </p>
 
-  <div class="heart">❤️</div>
+  <div class="cute">🐻🌸💗</div>
 
-  <h2>Purva, will you be mine? 💍</h2>
+  <p>
+    I smile a little more because of you,  
+    and my heart feels at home when you’re around.
+  </p>
 
-  <button onclick="yes()">YES 💖</button>
-  <button onclick="no()">NO 🙈</button>
+  <h2>Purva, will you be mine forever? 💍✨</h2>
+
+  <button onclick="yes()">YESSS 💕</button>
+  <button onclick="no()">umm… NO 🙈</button>
 
   <div id="msg">
-    You just made me the happiest person alive 🥹❤️<br><br>
-    I promise to choose you, every single day.<br><br>
-    — Varad 💕
+    I knew you’d say yes 🥹💖<br><br>
+    I promise to care for you, laugh with you,  
+    and choose you—today and always.<br><br>
+    — Varad 💞
   </div>
 </div>
 
@@ -76,10 +129,22 @@ button {
 function yes() {
   document.getElementById("msg").style.display = "block";
 }
+
 function no() {
-  alert("Nice try 😌❤️");
+  alert("hehe 😌 that button is just for decoration 💗");
+}
+
+// floating hearts
+for (let i = 0; i < 20; i++) {
+  let heart = document.createElement("div");
+  heart.className = "heart";
+  heart.innerHTML = "💖";
+  heart.style.left = Math.random() * 100 + "vw";
+  heart.style.animationDuration = (3 + Math.random() * 3) + "s";
+  document.body.appendChild(heart);
 }
 </script>
 
 </body>
 </html>
+
